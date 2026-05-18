@@ -25,29 +25,88 @@
 
 /* Light Mode Overrides */
 [data-theme="light"] .hero-overlay {
-  background: radial-gradient(circle at center, rgba(248,245,242,0.5) 0%, rgba(248,245,242,0.95) 100%);
+  background: radial-gradient(circle at center, rgba(248,245,242,0.4) 0%, rgba(248,245,242,0.95) 100%);
 }
 
 [data-theme="light"] .hero h1 {
-  text-shadow: 0 5px 20px rgba(255,255,255,0.9);
+  text-shadow: 0 5px 20px rgba(255,255,255,0.95);
+  color: #1A120B; /* Force extra dark for readability */
 }
 
 [data-theme="light"] .hero p {
-  text-shadow: 0 3px 10px rgba(255,255,255,0.9);
+  text-shadow: 0 3px 10px rgba(255,255,255,0.95);
   font-weight: 500;
+  color: #3C2A21;
 }
 
 [data-theme="light"] .btn-outline {
-  border-color: rgba(90, 74, 66, 0.4); /* var(--color-warm-beige) with opacity */
+  border-color: rgba(90, 74, 66, 0.4);
+}
+
+[data-theme="light"] .btn-outline:hover {
+  background-color: rgba(184, 134, 11, 0.08);
 }
 
 [data-theme="light"] .btn-primary:hover {
   border-color: var(--color-gold);
+  background-color: rgba(184, 134, 11, 0.05);
+}
+
+/* Light Mode Borders & Shadows */
+[data-theme="light"] .menu-card,
+[data-theme="light"] .info-card,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .footer-newsletter {
+  border-color: rgba(184, 134, 11, 0.15);
+  box-shadow: 0 10px 30px rgba(90, 74, 66, 0.08);
+}
+
+[data-theme="light"] .menu-card:hover,
+[data-theme="light"] .info-card:hover {
+  box-shadow: 0 15px 40px rgba(90, 74, 66, 0.15);
+  border-color: rgba(184, 134, 11, 0.3);
+}
+
+[data-theme="light"] .filter-btn {
+  border-color: rgba(90, 74, 66, 0.2);
+}
+
+[data-theme="light"] .filter-btn:hover,
+[data-theme="light"] .filter-btn.active {
+  background-color: rgba(184, 134, 11, 0.1);
+  border-color: var(--color-gold);
+  box-shadow: none;
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group select,
+[data-theme="light"] .form-group textarea,
+[data-theme="light"] .newsletter-form input {
+  border-color: rgba(90, 74, 66, 0.2);
+  background: #FFFFFF; /* Pure white inputs for crispness */
+}
+
+[data-theme="light"] .form-group input:focus,
+[data-theme="light"] .form-group select:focus,
+[data-theme="light"] .form-group textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.1);
 }
 
 [data-theme="light"] .social-links a {
-  border-color: rgba(184, 134, 11, 0.4);
-  background: rgba(184, 134, 11, 0.08);
+  border-color: rgba(184, 134, 11, 0.3);
+  background: rgba(184, 134, 11, 0.05);
+}
+
+[data-theme="light"] .social-links a:hover {
+  background: var(--color-gold);
+  color: #FFF;
+}
+
+[data-theme="light"] .footer,
+[data-theme="light"] .footer-bottom,
+[data-theme="light"] .menu-card-header {
+  border-color: rgba(90, 74, 66, 0.1);
 }
 
 * {
