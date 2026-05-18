@@ -203,6 +203,35 @@ document.addEventListener('DOMContentLoaded', () => {
         startInterval();
     }
 
+    // Theme Toggle (Ambience Mode)
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('midnightBrewTheme');
+    if(savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+    
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if(currentTheme === 'light') {
+            // Switch to Dark
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('midnightBrewTheme', 'dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            // Switch to Light
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('midnightBrewTheme', 'light');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    });
+
     // Scroll Animations
     const observerOptions = {
         root: null,
