@@ -276,10 +276,20 @@
                     <label for="notes">Special Requests (Optional)</label>
                     <input type="text" id="notes" placeholder="Anniversary, dietary restrictions, etc.">
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); alert('Reservation submitted successfully!');">Confirm Reservation</button>
+                <button type="submit" class="btn btn-primary" id="confirmReservationBtn">Confirm Reservation</button>
             </form>
         </div>
     </section>
+
+    <!-- Reservation Modal -->
+    <div class="modal-overlay" id="reservationModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Reservation Confirmed ☕</h3>
+            <p class="modal-message">Thank you for choosing Midnight Brew. Your table reservation has been successfully received.</p>
+            <p class="modal-subtext">We look forward to serving you.</p>
+            <button class="btn btn-primary modal-close-btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" id="contact">

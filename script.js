@@ -51,4 +51,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
     }
+
+    // Reservation Modal Logic
+    const reservationForm = document.querySelector('.reservation-form');
+    const modal = document.getElementById('reservationModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    if(reservationForm && modal) {
+        reservationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show modal
+            modal.classList.add('active');
+            // Reset form
+            this.reset();
+            // Reset the min date
+            if(dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+        });
+    }
+
+    if(closeModalBtn && modal) {
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+    }
+
+    // Close modal when clicking outside of it
+    if(modal) {
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
 });
