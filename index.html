@@ -61,9 +61,17 @@
         <h2 class="section-title">Signature Menu</h2>
         <p class="section-subtitle">Discover our handcrafted beverages and culinary masterpieces.</p>
         
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="coffee">Coffee</button>
+            <button class="filter-btn" data-filter="main-course">Main Course</button>
+            <button class="filter-btn" data-filter="desserts">Desserts</button>
+            <button class="filter-btn" data-filter="drinks">Drinks</button>
+        </div>
+
         <div class="menu-grid">
             <!-- Item 1 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="coffee">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_espresso.png" alt="Gourmet Espresso">
                 </div>
@@ -77,7 +85,7 @@
             </div>
 
             <!-- Item 2 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="coffee">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_cold_brew.png" alt="Cold Brew">
                 </div>
@@ -91,7 +99,7 @@
             </div>
 
             <!-- Item 3 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="main-course">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_pasta.png" alt="Signature Pasta">
                 </div>
@@ -105,7 +113,7 @@
             </div>
 
             <!-- Item 4 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="main-course">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_pizza.png" alt="Gourmet Pizza">
                 </div>
@@ -119,7 +127,7 @@
             </div>
 
             <!-- Item 5 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="desserts">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_dessert.png" alt="Chocolate Dessert">
                 </div>
@@ -133,7 +141,7 @@
             </div>
 
             <!-- Item 6 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="drinks">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_mocktail.png" alt="Mocktail">
                 </div>
@@ -147,7 +155,7 @@
             </div>
             
             <!-- Item 7 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="coffee">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_cappuccino.png" alt="Cappuccino">
                 </div>
@@ -161,7 +169,7 @@
             </div>
             
             <!-- Item 8 -->
-            <div class="menu-card">
+            <div class="menu-card" data-category="desserts">
                 <div class="menu-card-img">
                     <img src="assets/images/menu_pancakes.png" alt="Pancakes">
                 </div>

@@ -86,4 +86,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Menu Category Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    if(filterBtns.length > 0 && menuCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                menuCards.forEach(card => {
+                    // Reset animation classes
+                    card.classList.remove('show');
+                    
+                    if(filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hide');
+                        // Add show class with slight delay to trigger animation
+                        setTimeout(() => {
+                            card.classList.add('show');
+                        }, 10);
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+    }
 });

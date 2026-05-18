@@ -295,6 +295,54 @@ img {
   background-color: var(--color-dark-charcoal);
 }
 
+/* Menu Filters */
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(229, 229, 203, 0.2);
+  color: var(--color-warm-beige);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.filter-btn.active {
+  background: var(--color-gold);
+  color: var(--color-dark-charcoal);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Menu Animation */
+.menu-card.hide {
+  display: none;
+}
+
+.menu-card.show {
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
