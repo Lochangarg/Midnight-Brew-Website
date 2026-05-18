@@ -227,13 +227,14 @@ img {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--color-gold);
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  flex: 1;
 }
 
 .logo-icon {
@@ -244,24 +245,29 @@ img {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .nav-links a {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.05rem;
+  font-weight: 500;
   position: relative;
+  color: var(--color-warm-beige);
+  transition: all 0.4s ease;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: var(--color-gold);
-  transition: var(--transition);
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
 .nav-links a:hover::after {
@@ -270,12 +276,15 @@ img {
 
 .nav-links a:hover {
   color: var(--color-gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
 .nav-controls {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1.5rem;
+  flex: 1;
 }
 
 .theme-toggle {
