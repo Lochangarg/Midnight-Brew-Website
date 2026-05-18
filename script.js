@@ -1,3 +1,15 @@
+// Premium Loading Screen
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loaderWrapper');
+    if(loader) {
+        // Slight delay to showcase the loader animation
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            document.body.classList.remove('loading');
+        }, 1500); // 1.5 second loading screen
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const hamburger = document.getElementById('hamburger');
