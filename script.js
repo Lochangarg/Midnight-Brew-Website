@@ -118,4 +118,76 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Testimonial Carousel
+    const track = document.getElementById('testimonialTrack');
+    const tCards = document.querySelectorAll('.testimonial-card');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if(track && tCards.length > 0 && dotsContainer) {
+        let currentIndex = 0;
+        let slideInterval;
+        
+        // Create dots dynamically
+        tCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            
+            // Add click event for navigation
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+            
+            dotsContainer.appendChild(dot);
+        });
+        
+        const dots = document.querySelectorAll('.dot');
+        
+        function updateSlides() {
+            // Move the track
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update active classes for cards and dots
+            tCards.forEach((card, index) => {
+                if(index === currentIndex) {
+                    card.classList.add('active-slide');
+                } else {
+                    card.classList.remove('active-slide');
+                }
+            });
+            
+            dots.forEach((dot, index) => {
+                if(index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlides();
+            resetInterval();
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % tCards.length;
+            updateSlides();
+        }
+        
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000); // 5 seconds per slide
+        }
+        
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+        
+        // Initialize
+        tCards[0].classList.add('active-slide');
+        startInterval();
+    }
 });
