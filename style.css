@@ -231,6 +231,15 @@ img {
   font-weight: 700;
   color: var(--color-gold);
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -1067,7 +1076,28 @@ img {
 .footer-col h3 {
   color: var(--color-gold);
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.brand-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem !important;
 }
 
 .footer-col p {
