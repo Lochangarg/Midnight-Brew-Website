@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Brew | Premium Café & Restaurant</title>
+    <meta name="description" content="Experience handcrafted coffee, delicious cuisine, and a warm modern café atmosphere at Midnight Brew.">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">Midnight Brew.</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reservations">Reservations</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="assets/images/hero_bg.png" alt="Midnight Brew Cafe Interior" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Crafted Coffee.<br>Cozy Moments.</h1>
+            <p>Experience handcrafted coffee, delicious cuisine, and a warm modern café atmosphere.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="#reservations" class="btn btn-outline">Reserve Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/images/gallery_1.png" alt="Pouring artisan coffee">
+        </div>
+        <div class="about-content">
+            <h2 class="section-title" style="text-align: left;">Our Story</h2>
+            <p>At Midnight Brew, we believe in the art of taking a moment for yourself. Nestled in the heart of the city, our modern sanctuary offers an escape from the ordinary.</p>
+            <p>From ethically sourced artisan coffee beans to our signature gourmet dishes, every element is curated to provide a warm, luxurious dining experience. Whether you're here for a quiet morning brew or an elegant evening dinner, you're always welcome.</p>
+            <a href="#reservations" class="btn btn-outline" style="margin-top: 1rem;">Experience It</a>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section class="menu" id="menu">
+        <h2 class="section-title">Signature Menu</h2>
+        <p class="section-subtitle">Discover our handcrafted beverages and culinary masterpieces.</p>
+        
+        <div class="menu-grid">
+            <!-- Item 1 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_espresso.png" alt="Gourmet Espresso">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Midnight Espresso</h3>
+                        <span class="menu-card-price">₹250</span>
+                    </div>
+                    <p class="menu-card-desc">Rich, dark roast with notes of chocolate and hazelnut.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_cold_brew.png" alt="Cold Brew">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Artisan Cold Brew</h3>
+                        <span class="menu-card-price">₹350</span>
+                    </div>
+                    <p class="menu-card-desc">Steeped for 24 hours, served over ice with vanilla cream.</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_pasta.png" alt="Signature Pasta">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Truffle Mushroom Pasta</h3>
+                        <span class="menu-card-price">₹650</span>
+                    </div>
+                    <p class="menu-card-desc">Handmade fettuccine with creamy black truffle sauce.</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_pizza.png" alt="Gourmet Pizza">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Margherita Gold</h3>
+                        <span class="menu-card-price">₹550</span>
+                    </div>
+                    <p class="menu-card-desc">Wood-fired crust, San Marzano tomatoes, fresh basil, burrata.</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_dessert.png" alt="Chocolate Dessert">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Decadent Lava Cake</h3>
+                        <span class="menu-card-price">₹450</span>
+                    </div>
+                    <p class="menu-card-desc">Warm Belgian chocolate with a liquid center, gold flakes.</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_mocktail.png" alt="Mocktail">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Sunset Sparkle</h3>
+                        <span class="menu-card-price">₹300</span>
+                    </div>
+                    <p class="menu-card-desc">Refreshing layers of citrus, hibiscus, and sparkling water.</p>
+                </div>
+            </div>
+            
+            <!-- Item 7 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_cappuccino.png" alt="Cappuccino">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Velvet Cappuccino</h3>
+                        <span class="menu-card-price">₹320</span>
+                    </div>
+                    <p class="menu-card-desc">Perfectly balanced espresso with silky steamed milk and latte art.</p>
+                </div>
+            </div>
+            
+            <!-- Item 8 -->
+            <div class="menu-card">
+                <div class="menu-card-img">
+                    <img src="assets/images/menu_pancakes.png" alt="Pancakes">
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3 class="menu-card-title">Ricotta Pancakes</h3>
+                        <span class="menu-card-price">₹480</span>
+                    </div>
+                    <p class="menu-card-desc">Fluffy pancakes topped with berry compote and maple syrup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">The Ambiance</h2>
+        <p class="section-subtitle">Take a glimpse into our modern and cozy spaces.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/images/gallery_1.png" alt="Cafe Interior">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery_2.png" alt="Pouring Coffee">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery_3.png" alt="Coffee Details">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery_4.png" alt="Pastries">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">Guest Experiences</h2>
+        <p class="section-subtitle">What our patrons are saying about Midnight Brew.</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Absolutely stunning interior and the best truffle pasta I've ever had. The cold brew is refreshing and smooth. A perfect spot for a date night."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-info">
+                        <h4>Sarah Jenkins</h4>
+                        <p>Food Critic</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Midnight Brew has mastered the art of cozy luxury. The attention to detail in their presentation and the warm lighting make you want to stay for hours."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-info">
+                        <h4>Marcus Thorne</h4>
+                        <p>Local Architect</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The lava cake is out of this world! Pair it with their signature espresso, and you're in heaven. The service is impeccable and highly attentive."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-info">
+                        <h4>Elena Rostova</h4>
+                        <p>Regular Patron</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservations">
+        <div class="reservation-container">
+            <h2 class="section-title">Reserve a Table</h2>
+            <p class="section-subtitle">Secure your spot for an unforgettable dining experience.</p>
+            
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests">
+                        <option value="1">1 Person</option>
+                        <option value="2" selected>2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5+">5+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="notes">Special Requests (Optional)</label>
+                    <input type="text" id="notes" placeholder="Anniversary, dietary restrictions, etc.">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); alert('Reservation submitted successfully!');">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Midnight Brew.</h3>
+                <p>A modern premium café offering artisanal coffee and a luxurious dining experience in a cozy atmosphere.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Artisan Avenue, Bandra West, Mumbai 400050</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> hello@midnightbrew.com</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Mon - Thu: 7:00 AM - 10:00 PM</p>
+                <p>Fri - Sat: 7:00 AM - 11:30 PM</p>
+                <p>Sunday: 8:00 AM - 9:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Midnight Brew. All Rights Reserved. Designed for premium experience.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
