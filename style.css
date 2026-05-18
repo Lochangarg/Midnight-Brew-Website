@@ -1092,27 +1092,78 @@ img {
 .footer {
   background-color: var(--color-dark-secondary);
   padding: 5rem 5% 2rem;
-  border-top: 1px solid rgba(229, 229, 203, 0.1);
+  border-top: 1px solid rgba(229, 229, 203, 0.05);
+}
+
+.footer-newsletter {
+  background-color: var(--color-dark-charcoal);
+  border-radius: 15px;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.newsletter-content h3 {
+  font-size: 2rem;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  max-width: 500px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-right: none;
+  border-radius: 30px 0 0 30px;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.newsletter-form .btn {
+  border-radius: 0 30px 30px 0;
+  padding: 1rem 1.5rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem;
   margin-bottom: 4rem;
 }
 
 .footer-col h3 {
-  color: var(--color-gold);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--color-cream);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-logo-icon {
@@ -1131,9 +1182,45 @@ img {
 
 .footer-col p {
   margin-bottom: 0.8rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--color-gold);
+  padding-left: 8px;
+}
+
+.footer-contact-list {
+  list-style: none;
+}
+
+.footer-contact-list li {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+  opacity: 0.8;
+}
+
+.footer-contact-list i {
+  color: var(--color-gold);
+  margin-top: 4px;
 }
 
 .social-links {
@@ -1149,23 +1236,47 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   color: var(--color-gold);
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   background: var(--color-gold);
   color: var(--color-dark-charcoal);
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
 .footer-bottom {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(229, 229, 203, 0.1);
   font-size: 0.9rem;
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-dark-charcoal);
+  color: var(--color-gold);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-gold);
+  color: var(--color-dark-charcoal);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
 /* Floating Reservation Button */
@@ -1226,6 +1337,7 @@ img {
   .gallery-item:nth-child(2) { grid-column: span 2; }
   .gallery-item:nth-child(3), .gallery-item:nth-child(4) { grid-column: span 1; }
   .reservation-container { padding: 2.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
 
 @media (max-width: 768px) {
@@ -1248,6 +1360,11 @@ img {
   .reservation-form { grid-template-columns: 1fr; }
   .form-group.full-width { grid-column: span 1; }
   .reservation-form .btn { grid-column: span 1; }
+  
+  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-newsletter { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+  .newsletter-form { width: 100%; max-width: none; }
+  .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
   
   .floating-btn {
     bottom: 20px;
