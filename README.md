@@ -71,7 +71,3 @@ To fully enjoy smooth asset loading and backdrop-filter behavior:
   * All hover interactions run on a custom cubic-bezier curve (`cubic-bezier(0.25, 0.8, 0.25, 1)`) to simulate the organic, soft easing characteristic of premium luxury brands.
 
 ---
-
-## 📝 License
-
-This project is open-source and available under the **MIT License**.
