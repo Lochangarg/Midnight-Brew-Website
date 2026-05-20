@@ -3,6 +3,8 @@
 > **Crafted Coffee. Cozy Moments.**  
 > A premium, cinematic, and responsive web experience designed for a modern luxury café brand. Localized for an elegant coffee house aesthetic with seamless dark/light theme switching, smooth transitions, and high-contrast typography.
 
+🔗 **[Live Demonstration](https://lochangarg.github.io/Midnight-Brew-Website/)**
+
 ---
 
 ## ✨ Features
